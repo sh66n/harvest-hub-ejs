@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Index</title>
+</head>
+<body>
+    <h1>All posts</h1>
+    <ul>
+        <% for(let i = 0; i < allPosts.length; i++) { %>
+            <li>
+                <a href="/posts/<%= allPosts[i]._id %>"> 
+                    <%= allPosts[i].title %>
+                </a> - <%= allPosts[i].author %>
+            </li>
+        <% } %>
+    </ul>
+    <button><a href="/posts/new">Create new post</a></button>
+</body>
+</html>
